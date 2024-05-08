@@ -1,5 +1,6 @@
 import pygame
 from random import choice
+import colorsys
 
 RES = WIDTH, HEIGHT = 1202, 800
 TILE = 25
@@ -8,6 +9,7 @@ cols, rows = WIDTH // TILE, HEIGHT // TILE
 pygame.init()
 sc = pygame.display.set_mode(RES)
 clock = pygame.time.Clock()
+
 
 class Cell:
     def __init__(self, x, y):
