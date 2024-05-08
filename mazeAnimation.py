@@ -74,7 +74,7 @@ def remove_walls(current, next):
 grid_cells = [Cell(col, row) for row in range(rows) for col in range(cols)]
 current_cell = grid_cells[0]
 stack = []
-colors, color = [], 0
+colors, color = [], -255
 
 while True:
     sc.fill(pygame.Color('darkslategray'))
@@ -92,7 +92,7 @@ while True:
     if next_cell:
         next_cell.visited = True
         stack.append(current_cell)
-        colors.append((min(color, 255), 10, 100))
+        colors.append(((color % 255), 0, (255 - color % 255)))
         color += 1
         remove_walls(current_cell, next_cell)
         current_cell = next_cell
