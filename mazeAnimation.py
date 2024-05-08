@@ -1,8 +1,8 @@
 import pygame
 from random import choice
 
-RES = WIDTH, HEIGHT = 1202, 902
-TILE = 50
+RES = WIDTH, HEIGHT = 1202, 800
+TILE = 25
 cols, rows = WIDTH // TILE, HEIGHT // TILE
 
 pygame.init()
@@ -74,7 +74,7 @@ def remove_walls(current, next):
 grid_cells = [Cell(col, row) for row in range(rows) for col in range(cols)]
 current_cell = grid_cells[0]
 stack = []
-colors, color = [], 80
+colors, color = [], 0
 
 while True:
     sc.fill(pygame.Color('darkslategray'))
